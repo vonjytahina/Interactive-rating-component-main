@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+  --primary-orange: hsl(25, 97%, 53%);
+
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-light-grey: hsl(217, 12%, 63%);
+  --neutral-medium-grey: hsl(216, 12%, 54%);
+  --neutral-dark-blue: hsl(213, 19%, 18%);
+  --neutral-very-dark-blue: hsl(216, 12%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Overpass', sans-serif;
+  font-size: 15px;
+}
+
+.container {
+  width: 1440px;
+  height: 900px;
+  margin: 0px auto;
+  background: var(--neutral-very-dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.attribution {
+  margin: 20px auto 5px;
+}
+
+.app {
+  width: 400px;
+  height: 420px;
+  background: var(--neutral-dark-blue);
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.app .star {
+  background: rgba(35%, 45%, 55%, .1);
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.app h2 {
+  color: var(--neutral-white);
+  font-size: 28px;
+  margin: 30px 0px 15px;
+}
+
+.app p {
+  color: var(--neutral-light-grey);
+  line-height: 24px;
+}
+
+.app ul.note {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0px;
+}
+
+.app ul.note li {
+  list-style: none;
+  background: rgba(35%, 45%, 55%, .1);
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 700;
+  color:  var(--neutral-light-grey);
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.app ul.note li:hover {
+  background: var(--primary-orange);
+  color:  var(--neutral-white);
+}
+
+.checked {
+  background: #798696!important;
+  color: #fff!important;
+}
+.app button.submit {
+  width: 100%;
+  padding: 15px 0px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  transition: all .3s ease-in-out;
+  background: var(--primary-orange);
+  text-transform: uppercase;
+  color: var(--neutral-white);
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.app button.submit:hover {
+  background: var(--neutral-white);  
+  color: var(--primary-orange);
+  font-weight: 700;
+}
+
+.app .thank-you {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.thank-you .response {
+  color: var(--primary-orange);
+  background: rgba(35%, 45%, 55%, .1);
+  padding: 7px 20px;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+
+.thank-you p {
+  text-align: center;
+}
+
+/* responsive */
+@media screen and (max-width: 375px) {
+  .container {
+    width: 375px;
+    height: 750px;
+    border: none;
+    overflow: hidden;
+  }
+
+  .app {
+    width: 340px;
+    height: 400px;
+  }
+
+  .app h2 {
+  font-size: 24px;
+}
+
+  .app p {
+    font-size: 14px;
+  }
+
+  .app ul.note li {
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+}
+
+
+  .attribution {
+    margin: 20px 0px 5px 0px;
+    font-size: 12px;
+  }
+
+  .attribution a {
+    font-size: 12px;
+  }
+}
